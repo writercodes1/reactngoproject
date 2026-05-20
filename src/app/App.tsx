@@ -1,25 +1,40 @@
-import { Header } from "./components/Header";
-import { HeroSection } from "./components/HeroSection";
-import { DonationSection } from "./components/DonationSection";
-import { VolunteerForm } from "./components/VolunteerForm";
-import { ImpactShowcase } from "./components/ImpactShowcase";
-import { Testimonials } from "./components/Testimonials";
-import { Campaigns } from "./components/Campaigns";
-import { Footer } from "./components/Footer";
+import heroImage from "../assets/photo-1488521787991-ed7bbaae773c.jpg";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <HeroSection />
-        <DonationSection />
-        <VolunteerForm />
-        <ImpactShowcase />
-        <Testimonials />
-        <Campaigns />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <header className="header">
+        <div className="container nav">
+          <div className="logo">InAmigos Foundation</div>
+
+          <div className="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Campaigns</a>
+            <a href="#">Contact</a>
+          </div>
+
+          <button className="btn">Donate Now</button>
+        </div>
+      </header>
+
+      <section className="hero">
+        <div className="container">
+          <h1>Together We Can Change Lives</h1>
+
+          <p>
+            Join us in making a difference by providing education,
+            food, and healthcare to communities in need.
+          </p>
+
+          <div className="hero-buttons">
+            <button className="btn">Donate Now</button>
+            <button className="btn">Become Volunteer</button>
+          </div>
+
+          <img src={heroImage} alt="Children" />
+        </div>
+      </section>
+    </>
   );
 }
